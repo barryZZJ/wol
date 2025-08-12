@@ -1,2 +1,10 @@
-# wol
-koolshare wake on lan plugin (personal use, web page may be flawed)
+自用，修改自原版Wake on LAN页面，没有针对插件进行特别优化（比如没有返回按钮），比较简陋。
+
+## 安装
+
+在release中下载wol.tar.gz，手动安装即可。
+
+## 说明：
+
+原版使用的`ether-wake`程序只发送到`255.255.255.255`，不知道为什么电脑接收不到，需要发送到`192.168.50.255`才能收到，故编写此插件，使用自己编写的`wol`程序，支持指定ip、端口（使用方式：`wol [-p PORT=9] --if IFNAME MAC` 或`wol [-p PORT=9] -i IP MAC`）
+
